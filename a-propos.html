@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos — CPCREDO</title>
+    <meta name="description" content="Mission, gouvernance et cadre coopératif de CPCREDO à Pétion-Ville." />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="about" data-title-key="meta.aboutTitle" data-desc-key="meta.aboutDesc">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker" data-i18n="about.kicker">À propos</p>
+        <h1 data-i18n="about.title">Une caisse pour le développement de l’Ouest</h1>
+        <p class="lead" data-i18n="about.lead">CPCREDO naît à Pétion-Ville pour offrir un lieu d’épargne et de crédit qui appartient à ses sociétaires.</p>
+      </header>
+
+      <section class="section">
+        <div class="container split">
+          <figure class="glass" style="overflow:hidden;padding:0">
+            <img src="./brand/enseigne.jpg" alt="Enseigne CPCREDO : C.P. Épargne et de Crédit." style="height:100%;object-fit:cover;min-height:280px" />
+          </figure>
+          <div class="prose">
+            <h2 data-i18n="about.missionTitle">Mission</h2>
+            <p data-i18n="about.mission">Recevoir l’épargne des sociétaires et leur consentir du crédit, dans un cadre coopératif, pour soutenir les familles, les métiers et les petites entreprises de notre zone.</p>
+            <h2 data-i18n="about.whatTitle">Qu’est-ce qu’une caisse populaire ?</h2>
+            <p data-i18n="about.what">En Haïti, une coopérative d’épargne et de crédit (CEC), souvent appelée caisse populaire, est une coopérative financière.</p>
+            <p data-i18n="about.law">Cadre légal de référence : loi du 20 juin 2002. Autorisation BRH : [À CONFIRMER].</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="about.valuesTitle">Ce qui nous lie</h2>
+          </div>
+          <div class="grid-3">
+            <article class="glass card"><h3 data-i18n="about.v1t">Adhésion ouverte</h3><p data-i18n="about.v1b"></p></article>
+            <article class="glass card"><h3 data-i18n="about.v2t">Démocratie</h3><p data-i18n="about.v2b"></p></article>
+            <article class="glass card"><h3 data-i18n="about.v3t">Participation</h3><p data-i18n="about.v3b"></p></article>
+            <article class="glass card"><h3 data-i18n="about.v4t">Autonomie</h3><p data-i18n="about.v4b"></p></article>
+            <article class="glass card"><h3 data-i18n="about.v5t">Éducation</h3><p data-i18n="about.v5b"></p></article>
+            <article class="glass card"><h3 data-i18n="about.v6t">Solidarité</h3><p data-i18n="about.v6b"></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <h2 data-i18n="about.govTitle">Gouvernance type d’une CEC</h2>
+            <p class="lead" data-i18n="about.govLead">Les noms des dirigeants seront publiés dès confirmation. Aucun nom n’est inventé ici.</p>
+            <ul class="list-check">
+              <li data-i18n="about.g1">Assemblée générale — sociétaires</li>
+              <li data-i18n="about.g2">Conseil d’administration</li>
+              <li data-i18n="about.g3">Comité de crédit</li>
+              <li data-i18n="about.g4">Comité de surveillance</li>
+              <li data-i18n="about.g5">Direction — [À CONFIRMER]</li>
+            </ul>
+          </div>
+          <div class="glass card">
+            <h2 data-i18n="about.zoneTitle">Zone et siège</h2>
+            <p data-i18n="about.zone"></p>
+            <p>Pétion-Ville, Haïti</p>
+            <p><a class="btn btn-gold" href="./contact.html" data-i18n="common.ctaContact">Nous écrire</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

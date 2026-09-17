@@ -1,0 +1,12 @@
+{
+  "name": "CPCREDO — Caisse populaire de l’Ouest",
+  "short_name": "CPCREDO",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050914",
+  "theme_color": "#07111f",
+  "icons": [
+    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

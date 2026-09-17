@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Épargne et crédit — CPCREDO</title>
+    <meta name="description" content="Produits d’épargne et de crédit de la caisse populaire CPCREDO." />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="products" data-title-key="meta.productsTitle" data-desc-key="meta.productsDesc">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker" data-i18n="products.kicker">Produits</p>
+        <h1 data-i18n="products.title">Épargne qui protège, crédit qui se rembourse</h1>
+        <p class="lead" data-i18n="products.lead"></p>
+      </header>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="products.saveKicker">Épargne</p>
+            <h2 data-i18n="products.saveTitle">Garder, projeter, transmettre</h2>
+          </div>
+          <div class="grid-2">
+            <article class="glass card"><h3 data-i18n="products.p1t"></h3><p data-i18n="products.p1b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.p2t"></h3><p data-i18n="products.p2b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.p3t"></h3><p data-i18n="products.p3b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.p4t"></h3><p data-i18n="products.p4b"></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="products.loanKicker">Crédit</p>
+            <h2 data-i18n="products.loanTitle">Un crédit n’est pas un cadeau</h2>
+          </div>
+          <div class="grid-2">
+            <article class="glass card"><h3 data-i18n="products.l1t"></h3><p data-i18n="products.l1b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.l2t"></h3><p data-i18n="products.l2b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.l3t"></h3><p data-i18n="products.l3b"></p></article>
+            <article class="glass card"><h3 data-i18n="products.l4t"></h3><p data-i18n="products.l4b"></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <article class="glass card">
+            <h2 data-i18n="products.howTitle"></h2>
+            <p data-i18n="products.how"></p>
+          </article>
+          <article class="glass card">
+            <h2 data-i18n="products.ratesTitle"></h2>
+            <p data-i18n="products.rates"></p>
+            <h2 data-i18n="products.otherTitle"></h2>
+            <p data-i18n="products.other"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

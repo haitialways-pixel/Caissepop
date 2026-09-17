@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — CPCREDO</title>
+    <meta name="description" content="Écrire, appeler ou WhatsApp CPCREDO à Pétion-Ville." />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="contact" data-title-key="meta.contactTitle" data-desc-key="meta.contactDesc">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker" data-i18n="contact.kicker">Contact</p>
+        <h1 data-i18n="contact.title">Parlez-nous. En français ou en kreyòl.</h1>
+        <p class="lead" data-i18n="contact.lead"></p>
+      </header>
+      <section class="section">
+        <div class="container split">
+          <div>
+            <div class="grid-2" style="margin-bottom:1rem">
+              <article class="glass card">
+                <p class="meta" data-i18n="contact.phone"></p>
+                <p><a href="tel:+50931093591">+509 3109-3591</a></p>
+                <p><a data-whatsapp>WhatsApp</a></p>
+              </article>
+              <article class="glass card">
+                <p class="meta" data-i18n="contact.mail"></p>
+                <p><a href="mailto:1cpcredo@gmail.com">1cpcredo@gmail.com</a></p>
+              </article>
+            </div>
+            <article class="glass card" style="margin-bottom:1rem">
+              <p class="meta" data-i18n="contact.place"></p>
+              <p data-i18n="contact.placeValue">Pétion-Ville, Haïti</p>
+              <p class="tbc" data-i18n="contact.street"></p>
+              <p class="tbc" data-i18n="contact.hours"></p>
+            </article>
+            <div class="glass map-wrap">
+              <iframe title="Pétion-Ville" src="https://www.openstreetmap.org/export/embed.html?bbox=-72.32%2C18.49%2C-72.25%2C18.535&amp;layer=mapnik"></iframe>
+            </div>
+            <p class="lead" style="margin-top:0.8rem;font-size:0.9rem" data-i18n="contact.mapNote"></p>
+          </div>
+          <form class="glass form" data-contact-form>
+            <h2 data-i18n="contact.formTitle"></h2>
+            <label>
+              <span data-i18n="contact.name"></span>
+              <input name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span data-i18n="contact.phoneLabel"></span>
+              <input name="phone" type="tel" required autocomplete="tel" />
+            </label>
+            <label>
+              <span data-i18n="contact.emailLabel"></span>
+              <input name="email" type="email" autocomplete="email" />
+            </label>
+            <label>
+              <span data-i18n="contact.subject"></span>
+              <select name="subject" required>
+                <option value="" selected disabled>—</option>
+                <option value="Devenir sociétaire" data-i18n="contact.s1"></option>
+                <option value="Épargne" data-i18n="contact.s2"></option>
+                <option value="Crédit" data-i18n="contact.s3"></option>
+                <option value="Éducation financière" data-i18n="contact.s4"></option>
+                <option value="Autre" data-i18n="contact.s5"></option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="contact.message"></span>
+              <textarea name="message" required></textarea>
+            </label>
+            <div class="cta-row">
+              <button class="btn btn-gold" type="submit" data-i18n="contact.sendMail"></button>
+              <button class="btn btn-wa" type="button" data-form-wa data-i18n="contact.sendWa"></button>
+            </div>
+            <p data-i18n="contact.note"></p>
+            <p data-form-note hidden data-i18n="contact.ok"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

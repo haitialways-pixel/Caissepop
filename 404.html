@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page introuvable — CPCREDO</title>
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="" data-title-key="meta.notFoundTitle">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker">404</p>
+        <h1 data-i18n="notFound.title">Cette page n’existe pas</h1>
+        <p class="lead" data-i18n="notFound.body"></p>
+        <p><a class="btn btn-gold" href="./index.html" data-i18n="notFound.back">Retour à l’accueil</a></p>
+      </header>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

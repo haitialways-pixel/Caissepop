@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Éducation financière — CPCREDO</title>
+    <meta name="description" content="Guides pratiques : budget, épargne, crédit, sol et protection." />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="edu" data-title-key="meta.eduTitle" data-desc-key="meta.eduDesc">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker" data-i18n="edu.kicker">Éducation financière</p>
+        <h1 data-i18n="edu.title">Comprendre l’argent pour qu’il reste à vous</h1>
+        <p class="lead" data-i18n="edu.lead"></p>
+      </header>
+      <section class="section">
+        <div class="container grid-2">
+          <article class="glass card"><h3 data-i18n="edu.m1t"></h3><p data-i18n="edu.m1b"></p></article>
+          <article class="glass card"><h3 data-i18n="edu.m2t"></h3><p data-i18n="edu.m2b"></p></article>
+          <article class="glass card"><h3 data-i18n="edu.m3t"></h3><p data-i18n="edu.m3b"></p></article>
+          <article class="glass card"><h3 data-i18n="edu.m4t"></h3><p data-i18n="edu.m4b"></p></article>
+          <article class="glass card"><h3 data-i18n="edu.m5t"></h3><p data-i18n="edu.m5b"></p></article>
+          <article class="glass card"><h3 data-i18n="edu.m6t"></h3><p data-i18n="edu.m6b"></p></article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container grid-2">
+          <article class="glass card"><h2 data-i18n="edu.schoolTitle"></h2><p data-i18n="edu.school"></p></article>
+          <article class="glass card"><h2 data-i18n="edu.coopTitle"></h2><p data-i18n="edu.coop"></p></article>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-wait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devenir sociétaire — CPCREDO</title>
+    <meta name="description" content="Comment adhérer à CPCREDO, documents et droits des sociétaires." />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>html.i18n-wait body{visibility:hidden}</style>
+    <noscript><style>html.i18n-wait body{visibility:visible}</style></noscript>
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          var s = localStorage.getItem("cpcredo-lang");
+          var l = q === "ht" || q === "fr" ? q : s === "ht" || s === "fr" ? s : "fr";
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body data-page="join" data-title-key="meta.joinTitle" data-desc-key="meta.joinDesc">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+    <!--HEADER-->
+    <main id="main">
+      <header class="page-hero container">
+        <p class="kicker" data-i18n="join.kicker">Adhésion</p>
+        <h1 data-i18n="join.title">Devenir sociétaire, pas seulement ouvrir un compte</h1>
+        <p class="lead" data-i18n="join.lead"></p>
+      </header>
+
+      <section class="section">
+        <div class="container prose">
+          <h2 data-i18n="join.whoTitle"></h2>
+          <p data-i18n="join.who"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-head" data-i18n="join.stepsTitle"></h2>
+          <div class="grid-3">
+            <article class="glass card"><h3 data-i18n="join.st1t"></h3><p data-i18n="join.st1b"></p></article>
+            <article class="glass card"><h3 data-i18n="join.st2t"></h3><p data-i18n="join.st2b"></p></article>
+            <article class="glass card"><h3 data-i18n="join.st3t"></h3><p data-i18n="join.st3b"></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div class="glass card">
+            <h2 data-i18n="join.docsTitle"></h2>
+            <ul class="list-check">
+              <li data-i18n="join.d1"></li>
+              <li data-i18n="join.d2"></li>
+              <li data-i18n="join.d3"></li>
+              <li data-i18n="join.d4"></li>
+              <li data-i18n="join.d5"></li>
+            </ul>
+          </div>
+          <div>
+            <div class="glass card" style="margin-bottom:1rem">
+              <h2 data-i18n="join.rightsTitle"></h2>
+              <ul class="list-check">
+                <li data-i18n="join.r1"></li>
+                <li data-i18n="join.r2"></li>
+                <li data-i18n="join.r3"></li>
+                <li data-i18n="join.r4"></li>
+              </ul>
+            </div>
+            <div class="glass card">
+              <h2 data-i18n="join.dutiesTitle"></h2>
+              <ul class="list-check">
+                <li data-i18n="join.u1"></li>
+                <li data-i18n="join.u2"></li>
+                <li data-i18n="join.u3"></li>
+                <li data-i18n="join.u4"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container glass card">
+          <h2 data-i18n="join.userTitle"></h2>
+          <p data-i18n="join.user"></p>
+          <p style="margin-top:1rem"><a class="btn btn-gold" href="./contact.html" data-i18n="common.ctaJoin">Devenir sociétaire</a></p>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <!--FAB-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
