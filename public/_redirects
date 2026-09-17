@@ -1,3 +1,0 @@
-# Intentionally empty.
-# Pretty-URL rewrites like `/contact /contact.html 200` loop on Workers:
-# html_handling strips `.html`, then this file puts it back.

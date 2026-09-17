@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/cf-clean.mjs",
     "preview": "vite preview --host --port 4173",
     "deploy": "npm run build && wrangler deploy"
   },
