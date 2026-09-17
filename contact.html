@@ -30,27 +30,29 @@
       <header class="page-hero container">
         <p class="kicker" data-i18n="contact.kicker">Contact</p>
         <h1 data-i18n="contact.title">Parlez-nous. En français ou en kreyòl.</h1>
-        <p class="lead" data-i18n="contact.lead"></p>
+        <p class="lead" data-i18n="contact.lead">Pétion-Ville, Haïti. Réponse par WhatsApp, téléphone ou courriel.</p>
       </header>
       <section class="section">
         <div class="container split">
           <div>
             <div class="grid-2" style="margin-bottom:1rem">
               <article class="glass card">
-                <p class="meta" data-i18n="contact.phone"></p>
+                <p class="meta" data-i18n="contact.phone">Téléphone</p>
                 <p><a href="tel:+50941081537">+509 4108-1537</a></p>
-                <p><a data-whatsapp>WhatsApp</a></p>
+                <p class="meta" style="margin-top:0.8rem" data-i18n="contact.whatsappLabel">WhatsApp</p>
+                <p><a data-whatsapp>+509 4108-1537</a></p>
               </article>
               <article class="glass card">
-                <p class="meta" data-i18n="contact.mail"></p>
+                <p class="meta" data-i18n="contact.mail">Courriel</p>
                 <p><a href="mailto:contact@cpcredo.com">contact@cpcredo.com</a></p>
               </article>
             </div>
             <article class="glass card" style="margin-bottom:1rem">
-              <p class="meta" data-i18n="contact.place"></p>
+              <p class="meta" data-i18n="contact.place">Adresse</p>
               <p data-i18n="contact.placeValue">Pétion-Ville, Haïti</p>
-              <p class="tbc" data-i18n="contact.street"></p>
-              <p class="tbc" data-i18n="contact.hours"></p>
+              <p class="tbc" data-i18n="contact.street">Rue exacte : [À CONFIRMER]</p>
+              <p class="meta" style="margin-top:0.8rem" data-i18n="contact.hoursLabel">Horaires</p>
+              <p data-i18n="contact.hours">Lundi au vendredi 8:00 ~ 16:00. Samedi 9:00 ~ 13:00. Fermé le dimanche.</p>
             </article>
             <div class="glass map-wrap">
               <iframe title="Pétion-Ville" src="https://www.openstreetmap.org/export/embed.html?bbox=-72.32%2C18.49%2C-72.25%2C18.535&amp;layer=mapnik"></iframe>
@@ -58,37 +60,39 @@
             <p class="lead" style="margin-top:0.8rem;font-size:0.9rem" data-i18n="contact.mapNote"></p>
           </div>
           <form class="glass form" data-contact-form>
-            <h2 data-i18n="contact.formTitle"></h2>
+            <h2 data-i18n="contact.formTitle">Écrire à la caisse</h2>
             <label>
-              <span data-i18n="contact.name"></span>
+              <span data-i18n="contact.name">Nom</span>
               <input name="name" required autocomplete="name" />
             </label>
             <label>
-              <span data-i18n="contact.phoneLabel"></span>
+              <span data-i18n="contact.phoneLabel">Téléphone</span>
               <input name="phone" type="tel" required autocomplete="tel" />
             </label>
             <label>
-              <span data-i18n="contact.emailLabel"></span>
-              <input name="email" type="email" autocomplete="email" />
-            </label>
-            <label>
-              <span data-i18n="contact.subject"></span>
-              <select name="subject" required>
-                <option value="" selected disabled>—</option>
-                <option value="Devenir sociétaire" data-i18n="contact.s1"></option>
-                <option value="Épargne" data-i18n="contact.s2"></option>
-                <option value="Crédit" data-i18n="contact.s3"></option>
-                <option value="Éducation financière" data-i18n="contact.s4"></option>
-                <option value="Autre" data-i18n="contact.s5"></option>
+              <span data-i18n="contact.langLabel">Langue</span>
+              <select name="language" required>
+                <option value="fr" data-i18n="contact.langFr">Français</option>
+                <option value="ht" data-i18n="contact.langHt">Kreyòl</option>
               </select>
             </label>
             <label>
-              <span data-i18n="contact.message"></span>
+              <span data-i18n="contact.subject">Sujet</span>
+              <select name="subject" required>
+                <option value="" selected disabled>—</option>
+                <option value="Adhésion" data-i18n="contact.s1">Adhésion</option>
+                <option value="Épargne" data-i18n="contact.s2">Épargne</option>
+                <option value="Crédit" data-i18n="contact.s3">Crédit</option>
+                <option value="Autre" data-i18n="contact.s5">Autre</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="contact.message">Message</span>
               <textarea name="message" required></textarea>
             </label>
             <div class="cta-row">
-              <button class="btn btn-gold" type="submit" data-i18n="contact.sendMail"></button>
-              <button class="btn btn-wa" type="button" data-form-wa data-i18n="contact.sendWa"></button>
+              <button class="btn btn-gold" type="submit" data-i18n="contact.sendMail">Envoyer par courriel</button>
+              <button class="btn btn-wa" type="button" data-form-wa data-i18n="contact.sendWa">Continuer sur WhatsApp</button>
             </div>
             <p data-i18n="contact.note"></p>
             <p data-form-note hidden data-i18n="contact.ok"></p>

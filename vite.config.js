@@ -30,6 +30,7 @@ export default defineConfig({
         join: resolve(root, "devenir-societaire.html"),
         edu: resolve(root, "education-financiere.html"),
         news: resolve(root, "actualites.html"),
+        article: resolve(root, "article.html"),
         contact: resolve(root, "contact.html"),
         legal: resolve(root, "mentions-legales.html"),
         notFound: resolve(root, "404.html"),

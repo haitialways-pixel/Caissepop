@@ -458,6 +458,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 700;
 }
 
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.news-card .kicker { margin-bottom: 0; }
+.news-card .btn { margin-top: auto; align-self: flex-start; min-width: 7.5rem; }
+.news-card h2, .news-card h3 { font-size: 1.25rem; }
+.article-body {
+  max-width: 42rem;
+  color: var(--ink-muted);
+  margin-top: 1.2rem;
+}
+.article-body p { margin: 0 0 1em; }
 .news-card time, .meta {
   color: var(--gold-400);
   font-size: 0.8rem;

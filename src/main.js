@@ -1,8 +1,9 @@
 import "./styles.css";
+import { ARTICLES, CONTACT } from "./contact-info.js";
 import { translations } from "./translations.js";
 import { applyI18n, persistLang, readLang } from "./i18n.js";
 
-const WA_NUMBER = "50931093591";
+const WA_NUMBER = CONTACT.waNumber;
 
 function setLang(lang) {
   persistLang(lang);
@@ -83,7 +84,7 @@ function formPayload(form) {
   const body = [
     `Nom / Non: ${data.name || ""}`,
     `Téléphone / Telefòn: ${data.phone || ""}`,
-    `Courriel / Imèl: ${data.email || ""}`,
+    `Langue / Lang: ${data.language || ""}`,
     `Sujet / Sijè: ${subject}`,
     "",
     data.message || "",
@@ -95,12 +96,14 @@ function bindForm() {
   const form = document.querySelector("[data-contact-form]");
   if (!form) return;
   const note = form.querySelector("[data-form-note]");
+  const langSelect = form.querySelector('[name="language"]');
+  if (langSelect) langSelect.value = document.documentElement.dataset.lang || "fr";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!form.reportValidity()) return;
     const { subject, body } = formPayload(form);
-    const href = `mailto:1cpcredo@gmail.com?subject=${encodeURIComponent("CPCREDO — " + subject)}&body=${encodeURIComponent(body)}`;
+    const href = `mailto:${CONTACT.email}?subject=${encodeURIComponent("CPCREDO — " + subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = href;
     if (note) note.hidden = false;
   });
@@ -119,7 +122,29 @@ function bindForm() {
   }
 }
 
+function bindArticle() {
+  const root = document.querySelector("[data-article-root]");
+  if (!root) return;
+  const slug = new URLSearchParams(location.search).get("slug");
+  const key = ARTICLES[slug];
+  if (!key) {
+    window.location.replace("./404.html");
+    return;
+  }
+  const titleEl = root.querySelector("[data-article-title]");
+  const dateEl = root.querySelector("[data-article-date]");
+  const bodyEl = root.querySelector("[data-article-body]");
+  if (titleEl) titleEl.dataset.i18n = `news.${key}t`;
+  if (dateEl) dateEl.dataset.i18n = `news.${key}d`;
+  if (bodyEl) {
+    bodyEl.dataset.i18n = `news.${key}body`;
+    bodyEl.dataset.i18nHtml = "true";
+  }
+  document.body.dataset.titleKey = `news.${key}pageTitle`;
+}
+
 function boot() {
+  bindArticle();
   setLang(readLang());
   bindLang();
   bindNav();

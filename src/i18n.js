@@ -1,6 +1,8 @@
+import { CONTACT } from "./contact-info.js";
+
 export const LANGS = ["fr", "ht"];
 export const STORAGE_KEY = "cpcredo-lang";
-const WA_NUMBER = "50931093591";
+const WA_NUMBER = CONTACT.waNumber;
 
 export function readLang() {
   try {
