@@ -80,7 +80,7 @@ export const translations = {
       pill4: "Épargne · Crédit · Éducation",
       floatKicker: "Enseigne",
       floatTitle: "C.P. Épargne et de Crédit",
-      floatBody: "Le konbit financier de l’Ouest — épargner ensemble, financer ce qui fait grandir le quartier.",
+      floatBody: "Le konbit financier de l’Ouest — épargner ensemble, financer ce qui fait grandir la communauté.",
       trustTitle: "Une caisse, pas une banque",
       trustBody:
         "Dans une caisse populaire haïtienne, l’épargne des sociétaires finance le crédit des sociétaires. Le pouvoir appartient à l’assemblée, pas à des actionnaires extérieurs.",
@@ -420,7 +420,7 @@ export const translations = {
       pill4: "Epay · Kredi · Edikasyon",
       floatKicker: "Anseyn",
       floatTitle: "C.P. Epay ak Kredi",
-      floatBody: "Konbit finansye Lwès la — epaye ansanm, finanse sa k fè katye a grandi.",
+      floatBody: "Konbit finansye Lwès la — epaye ansanm, finanse sa k fè kominote a grandi.",
       trustTitle: "Yon kès, se pa yon bank",
       trustBody:
         "Nan yon kès popilè ayisyen, epay sosyetè yo finanse kredi sosyetè yo. Pouvwa a se pou asanble a, se pa pou aksyonè deyò.",
