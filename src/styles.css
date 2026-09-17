@@ -499,7 +499,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: 0 0 0 4px rgba(46, 242, 200, 0.12);
 }
 
-.split { display: grid; gap: 1rem; }
+.split { display: grid; gap: 1rem; align-items: start; }
+.about-end {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 720px) {
+  .about-end {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .about-end > .gov-card {
+    grid-row: 1 / span 2;
+  }
+}
 
 .form {
   display: grid;
@@ -652,6 +665,28 @@ input:focus, select:focus, textarea:focus {
   html { scroll-behavior: auto; }
   .reveal { transform: none; transition: none; }
   .btn:hover, .fab:hover { transform: none; }
+}
+
+.values-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.value-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.notice {
+  border-color: var(--stroke-gold);
+  background: linear-gradient(180deg, rgba(232, 192, 86, 0.12), rgba(255,255,255,0.03));
 }
 
 @media print {
