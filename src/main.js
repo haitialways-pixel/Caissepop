@@ -144,10 +144,13 @@ function bindArticle() {
   document.body.dataset.titleKey = `news.${key}pageTitle`;
 }
 
+const BUY_SPREAD = 0.5;
+const SELL_SPREAD = 2.5;
+
 function formatBrhRate(raw) {
   const n = Number(raw);
-  if (!Number.isFinite(n)) return "—,—";
-  return n.toLocaleString("fr-HT", { minimumFractionDigits: 4, maximumFractionDigits: 4 });
+  if (!Number.isFinite(n)) return null;
+  return n.toLocaleString("fr-HT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function renderTicker(lang) {
@@ -164,34 +167,68 @@ function renderTicker(lang) {
 }
 
 async function loadBrhRate() {
-  const root = document.querySelector("[data-brh-rate]");
+  const root = document.querySelector("[data-rate-panel]");
   if (!root) return;
   const buyEl = root.querySelector("[data-brh-buy]");
   const sellEl = root.querySelector("[data-brh-sell]");
   const refEl = root.querySelector("[data-brh-ref]");
   const dateEl = root.querySelector("[data-brh-date]");
   const pending = translations[readLang()]?.home?.ratePending || "[À CONFIRMER]";
-  const dash = "—,—";
   const showPlaceholder = () => {
-    if (buyEl) buyEl.textContent = dash;
-    if (sellEl) sellEl.textContent = dash;
-    if (refEl) refEl.textContent = dash;
+    if (buyEl) buyEl.textContent = pending;
+    if (sellEl) sellEl.textContent = pending;
+    if (refEl) refEl.textContent = pending;
     if (dateEl) dateEl.textContent = pending;
   };
   try {
     const res = await fetch("/api/brh-rate", { headers: { Accept: "application/json" } });
     const data = await res.json();
-    if (!data?.ok) {
+    const raw = Number(data?.reference || data?.rate);
+    if (!data?.ok || !Number.isFinite(raw)) {
       showPlaceholder();
       return;
     }
-    if (buyEl) buyEl.textContent = data.buy ? formatBrhRate(data.buy) : dash;
-    if (sellEl) sellEl.textContent = data.sell ? formatBrhRate(data.sell) : dash;
-    if (refEl) refEl.textContent = data.reference || data.rate ? formatBrhRate(data.reference || data.rate) : dash;
+    if (refEl) refEl.textContent = formatBrhRate(raw);
+    if (buyEl) buyEl.textContent = formatBrhRate(raw + BUY_SPREAD);
+    if (sellEl) sellEl.textContent = formatBrhRate(raw + SELL_SPREAD);
     if (dateEl) dateEl.textContent = data.date || pending;
   } catch {
     showPlaceholder();
   }
+}
+
+function bindRatePanel() {
+  const openBtn = document.querySelector("[data-rate-open]");
+  const panel = document.querySelector("[data-rate-panel]");
+  const closeBtn = document.querySelector("[data-rate-close]");
+  if (!openBtn || !panel) return;
+
+  const close = () => {
+    panel.hidden = true;
+    openBtn.setAttribute("aria-expanded", "false");
+  };
+  const toggle = () => {
+    const willOpen = panel.hidden;
+    panel.hidden = !willOpen;
+    openBtn.setAttribute("aria-expanded", String(willOpen));
+  };
+
+  openBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggle();
+  });
+  closeBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    close();
+  });
+  document.addEventListener("click", (e) => {
+    if (panel.hidden) return;
+    if (panel.contains(e.target) || openBtn.contains(e.target)) return;
+    close();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
 }
 
 function boot() {
@@ -202,6 +239,7 @@ function boot() {
   bindHeader();
   bindReveal();
   bindForm();
+  bindRatePanel();
   loadBrhRate();
 }
 

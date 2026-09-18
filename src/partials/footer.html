@@ -53,6 +53,38 @@
   </div>
   <div class="container footer-bottom">
     <p>© <span data-year></span> CPCREDO. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+    <div class="footer-toolbar">
+      <a href="tel:+50941081537">+509 4108-1537</a>
+      <a data-whatsapp>WhatsApp</a>
+      <button type="button" class="rate-chip" data-rate-open aria-expanded="false" aria-controls="rate-panel" data-i18n="home.rateTrigger">Taux du jour</button>
+    </div>
     <p class="footer-disclaimer" data-i18n="footer.disclaimer">Aucun taux, numéro d’agrément ou adresse de rue n’est publié ici tant qu’il n’est pas confirmé par la caisse.</p>
+  </div>
+  <div id="rate-panel" class="rate-panel" data-rate-panel hidden role="dialog" aria-modal="true" aria-labelledby="rate-panel-title">
+    <p id="rate-panel-title" class="rate-panel-title" data-i18n="home.rateTrigger">Taux du jour</p>
+    <table class="rate-table">
+      <thead>
+        <tr>
+          <th>USD/HTG</th>
+          <th data-i18n="home.rateBuy">Achat</th>
+          <th data-i18n="home.rateSell">Vente</th>
+          <th data-i18n="home.rateRef">Référence BRH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 USD</td>
+          <td class="num" data-brh-buy>[À CONFIRMER]</td>
+          <td class="num" data-brh-sell>[À CONFIRMER]</td>
+          <td class="num" data-brh-ref>[À CONFIRMER]</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rate-panel-meta">
+      <span data-brh-date>[À CONFIRMER]</span>
+      <span data-i18n="home.rateSource">Source : BRH</span>
+      <button type="button" class="rate-close" data-rate-close data-i18n="home.rateClose">Fermer</button>
+    </div>
+    <p class="rate-panel-note" data-i18n="home.rateDisclaimer"></p>
   </div>
 </footer>

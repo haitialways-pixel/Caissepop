@@ -78,10 +78,12 @@ export const translations = {
       rateBuy: "Achat",
       rateSell: "Vente",
       rateRef: "Référence BRH",
-      rateSource: "Source : BRH",
+      rateSource: "Source BRH",
       ratePending: "[À CONFIRMER]",
+      rateTrigger: "Taux du jour",
+      rateClose: "Fermer",
       rateDisclaimer:
-        "Source BRH. Le taux de référence n’est pas un taux d’opération CPCREDO. Achat et vente selon le marché / affichage BRH, à confirmer en agence.",
+        "Source du taux de référence : BRH. Achat = référence + 0,5 G. Vente = référence + 2,5 G. Taux indicatifs CPCREDO.",
       rateLink: "Voir la BRH",
       slogan: "Une caisse populaire qui se tient aux côtés des oubliés.",
       sloganSupport:
@@ -400,10 +402,12 @@ export const translations = {
       rateBuy: "Acha",
       rateSell: "Vant",
       rateRef: "Referans BRH",
-      rateSource: "Sous : BRH",
+      rateSource: "Sous BRH",
       ratePending: "[À KONFIME]",
+      rateTrigger: "To jounen an",
+      rateClose: "Fèmen",
       rateDisclaimer:
-        "Sous BRH. To referans la se pa to operasyon CPCREDO. Acha ak vant dapre mache / afiche BRH, pou konfime nan ajans.",
+        "Sous to referans : BRH. Acha = referans + 0,5 G. Vant = referans + 2,5 G. To endikatif CPCREDO.",
       rateLink: "Wè BRH la",
       slogan: "Yon kès popilè k ap kanpe bò kote moun yo bliye.",
       sloganSupport:
