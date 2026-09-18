@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve, dirname } from "node:path";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { brhJsonResponse, fetchBrhReference } from "./src/brh-rate.js";
 
 const root = dirname(fileURLToPath(import.meta.url));
 
@@ -19,8 +20,30 @@ function partials() {
   };
 }
 
+function brhDevApi() {
+  return {
+    name: "brh-dev-api",
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        if (req.url?.split("?")[0] !== "/api/brh-rate") return next();
+        try {
+          const data = await fetchBrhReference();
+          res.statusCode = 200;
+          res.setHeader("content-type", "application/json; charset=utf-8");
+          res.end(JSON.stringify({ ok: true, ...data }));
+        } catch (err) {
+          console.error("[brh-rate]", err?.message || err);
+          res.statusCode = 503;
+          res.setHeader("content-type", "application/json; charset=utf-8");
+          res.end(JSON.stringify({ ok: false }));
+        }
+      });
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [partials()],
+  plugins: [partials(), brhDevApi()],
   build: {
     rollupOptions: {
       input: {

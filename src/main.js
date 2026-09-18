@@ -11,6 +11,7 @@ function setLang(lang) {
   document.querySelectorAll("[data-year]").forEach((el) => {
     el.textContent = String(new Date().getFullYear());
   });
+  renderTicker(lang);
 }
 
 function bindLang() {
@@ -143,6 +144,49 @@ function bindArticle() {
   document.body.dataset.titleKey = `news.${key}pageTitle`;
 }
 
+function formatBrhRate(raw) {
+  const n = Number(raw);
+  if (!Number.isFinite(n)) return "—,—";
+  return n.toLocaleString("fr-HT", { minimumFractionDigits: 4, maximumFractionDigits: 4 });
+}
+
+function renderTicker(lang) {
+  const track = document.querySelector("[data-ticker]");
+  if (!track) return;
+  const items = translations[lang]?.home?.tickerItems || translations.fr.home.tickerItems;
+  const pills = items
+    .map(
+      (text) =>
+        `<a class="info-pill" href="./actualites.html">${text.replace(/</g, "")}</a>`
+    )
+    .join("");
+  track.innerHTML = pills + pills;
+}
+
+async function loadBrhRate() {
+  const root = document.querySelector("[data-brh-rate]");
+  if (!root) return;
+  const valueEl = root.querySelector("[data-brh-value]");
+  const dateEl = root.querySelector("[data-brh-date]");
+  const pending = translations[readLang()]?.home?.ratePending || "[À CONFIRMER]";
+  const showPlaceholder = () => {
+    if (valueEl) valueEl.textContent = "—,—";
+    if (dateEl) dateEl.textContent = pending;
+  };
+  try {
+    const res = await fetch("/api/brh-rate", { headers: { Accept: "application/json" } });
+    const data = await res.json();
+    if (!data?.ok || !data.rate) {
+      showPlaceholder();
+      return;
+    }
+    if (valueEl) valueEl.textContent = formatBrhRate(data.rate);
+    if (dateEl) dateEl.textContent = data.date || pending;
+  } catch {
+    showPlaceholder();
+  }
+}
+
 function boot() {
   bindArticle();
   setLang(readLang());
@@ -151,6 +195,7 @@ function boot() {
   bindHeader();
   bindReveal();
   bindForm();
+  loadBrhRate();
 }
 
 boot();

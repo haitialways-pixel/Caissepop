@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CPCREDO — Caisse populaire de Pétion-Ville</title>
-    <meta name="description" content="CPCREDO, caisse populaire d’épargne et de crédit pour le développement de l’Ouest. Pétion-Ville, Haïti. Français et kreyòl." />
+    <meta name="description" content="Bienvenue à CPCREDO, Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest. Pétion-Ville, Haïti." />
     <meta name="theme-color" content="#07111f" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="canonical" href="./index.html" />
     <link rel="alternate" hreflang="fr" href="./index.html?lang=fr" />
     <link rel="alternate" hreflang="ht" href="./index.html?lang=ht" />
-    <meta property="og:title" content="CPCREDO — Caisse populaire de Pétion-Ville" />
-    <meta property="og:description" content="Épargne, crédit et éducation financière. Une voix par sociétaire." />
+    <meta property="og:title" content="Bienvenue à CPCREDO" />
+    <meta property="og:description" content="Une caisse populaire qui se tient aux côtés des oubliés." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./brand/ouest-dusk.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,200 +35,94 @@
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
     <!--HEADER-->
     <main id="main">
-      <section class="hero">
-        <div class="hero-bg" aria-hidden="true">
+      <section class="welcome-stage" aria-labelledby="welcome-title">
+        <div class="welcome-media" aria-hidden="true">
           <img src="./brand/ouest-dusk.jpg" alt="" />
-          <div class="hero-aurora"></div>
+          <div class="welcome-veil"></div>
         </div>
-        <div class="container hero-content">
-          <div class="hero-copy">
-            <p class="kicker" data-i18n="home.kicker">Nouvelle caisse populaire · Ouest d’Haïti</p>
-            <h1 class="display">
-              <span data-i18n="home.title1">Votre argent.</span>
-              <span data-i18n="home.title2">Votre voix.</span>
-              <em data-i18n="home.title3">Notre Ouest.</em>
-            </h1>
-            <p class="lead" data-i18n="home.lead">
-              CPCREDO est la caisse des familles, des travailleurs et des entrepreneurs de Pétion-Ville. Une coopérative : vous n’êtes pas un client parmi d’autres, vous devenez sociétaire.
+        <div class="container welcome-inner">
+          <div class="welcome-glass">
+            <div class="cp-emblem" aria-hidden="true">
+              <svg viewBox="0 0 120 120" width="120" height="120">
+                <defs>
+                  <linearGradient id="cp-gold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#f6d98a"/>
+                    <stop offset="55%" stop-color="#e8c056"/>
+                    <stop offset="100%" stop-color="#2ef2c8"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="56" fill="none" stroke="url(#cp-gold)" stroke-width="1.4" opacity="0.9"/>
+                <circle cx="60" cy="60" r="48" fill="rgba(7,17,31,0.55)" stroke="rgba(46,242,200,0.28)" stroke-width="1"/>
+                <text x="60" y="74" text-anchor="middle" font-family="Syne, Segoe UI, sans-serif" font-size="44" font-weight="800" fill="url(#cp-gold)" letter-spacing="-2">CP</text>
+              </svg>
+            </div>
+            <p class="welcome-place" data-i18n="home.place">Pétion-Ville, Haïti</p>
+            <h1 id="welcome-title" class="welcome-hello" data-i18n="home.hello">Bienvenue à CPCREDO</h1>
+            <p class="official-name">
+              <span class="official-line1" data-i18n="home.nameLine1">Caisse Populaire d’Épargne et de Crédit</span>
+              <span class="official-line2" data-i18n="home.nameLine2">pour le Développement de l’Ouest</span>
             </p>
-            <div class="hero-actions">
-              <a class="btn btn-gold" href="./devenir-societaire.html" data-i18n="common.ctaJoin">Devenir sociétaire</a>
-              <a class="btn btn-teal" href="./produits.html" data-i18n="common.ctaProducts">Voir les produits</a>
-              <a class="btn btn-ghost" data-whatsapp data-i18n="common.whatsapp">WhatsApp</a>
-            </div>
-            <div class="pills">
-              <span class="pill" data-i18n="home.pill1">1 sociétaire = 1 voix</span>
-              <span class="pill" data-i18n="home.pill2">Pétion-Ville, Haïti</span>
-              <span class="pill" data-i18n="home.pill3">FR + Kreyòl</span>
-              <span class="pill" data-i18n="home.pill4">Épargne · Crédit · Éducation</span>
-            </div>
-          </div>
-          <aside class="glass hero-panel">
-            <p class="kicker" data-i18n="home.floatKicker"></p>
-            <figure class="enseigne">
-              <img src="./brand/enseigne.jpg" alt="Enseigne C.P. Épargne et de Crédit, pièce d’or au-dessus des lettres." />
-            </figure>
-            <h2 data-i18n="home.floatTitle">C.P. Épargne et de Crédit</h2>
-            <p data-i18n="home.floatBody">Le konbit financier de l’Ouest, épargner ensemble, financer ce qui fait grandir la communauté.</p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="glass band reveal">
-            <div>
-              <p class="kicker" data-i18n="home.vsKicker">La différence</p>
-              <h2 data-i18n="home.trustTitle">Une caisse, pas une banque</h2>
-              <p class="lead" data-i18n="home.trustBody">
-                Dans une caisse populaire haïtienne, l’épargne des sociétaires finance le crédit des sociétaires. Le pouvoir appartient à l’assemblée, pas à des actionnaires extérieurs.
-              </p>
-            </div>
-            <div class="pills">
-              <span class="pill">CEC</span>
-              <span class="pill">Loi 20 juin 2002</span>
-              <span class="pill">BRH <span class="tbc" data-i18n="common.tbc">[À CONFIRMER]</span></span>
+            <div class="welcome-actions">
+              <a class="btn btn-gold" href="./devenir-societaire.html" data-i18n="home.ctaJoin">Devenir sociétaire</a>
+              <a class="btn btn-ghost" href="./contact.html" data-i18n="home.ctaContact">Nous contacter</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="kicker" data-i18n="home.pillarsKicker">Ce que nous faisons</p>
-            <h2 data-i18n="home.pillarsTitle">Trois piliers, un même konbit</h2>
+      <section class="rate-bar" data-brh-rate>
+        <div class="container rate-bar-inner">
+          <div class="rate-pair">
+            <span class="rate-codes">USD <span aria-hidden="true">→</span> HTG</span>
+            <p class="rate-figure">
+              <span class="rate-eq">1 USD =</span>
+              <strong data-brh-value>—,—</strong>
+              <span class="rate-ccy">HTG</span>
+            </p>
+            <p class="rate-unit" data-i18n="home.rateUnit">gourdes pour 1 dollar EU</p>
           </div>
-          <div class="grid-3">
-            <article class="glass card reveal">
-              <div class="icon-orb" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11h6"/></svg>
-              </div>
-              <h3 data-i18n="home.saveTitle">Épargne</h3>
-              <p data-i18n="home.saveBody">Mettre de l’argent à l’abri pour l’école, le commerce, une urgence ou un projet. Les produits, durées et conditions seront affichés en caisse.</p>
-              <a href="./produits.html" data-i18n="common.learnMore">En savoir plus</a>
-            </article>
-            <article class="glass card reveal">
-              <div class="icon-orb gold" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M12 4v16"/><rect x="7" y="7" width="10" height="10" rx="2"/></svg>
-              </div>
-              <h3 data-i18n="home.loanTitle">Crédit</h3>
-              <p data-i18n="home.loanBody">Un prêt se décide selon votre capacité à rembourser, pas selon une promesse. Taux, frais et durées : [À CONFIRMER].</p>
-              <a href="./produits.html" data-i18n="common.learnMore">En savoir plus</a>
-            </article>
-            <article class="glass card reveal">
-              <div class="icon-orb" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5h10l6 7-6 7H4z"/></svg>
-              </div>
-              <h3 data-i18n="home.eduTitle">Éducation</h3>
-              <p data-i18n="home.eduBody">Comprendre un budget, un crédit, un sol ou un transfert avant de signer. Une caisse qui explique est une caisse qui protège.</p>
-              <a href="./education-financiere.html" data-i18n="common.learnMore">En savoir plus</a>
-            </article>
+          <div class="rate-meta">
+            <p class="rate-label" data-i18n="home.rateLabel">Taux de référence BRH</p>
+            <p class="rate-date"><span data-i18n="home.rateUpdated">Mise à jour</span> : <span data-brh-date>[À CONFIRMER]</span></p>
+            <p class="rate-note" data-i18n="home.rateDisclaimer">Source : Banque de la République d’Haïti (BRH). Taux de référence, pas un taux d’achat/vente CPCREDO.</p>
+            <a class="rate-link" href="https://www.brh.ht/" target="_blank" rel="noopener noreferrer" data-i18n="home.rateLink">Voir la BRH</a>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="slogan-block">
         <div class="container">
-          <div class="section-head reveal">
-            <p class="kicker" data-i18n="home.vsKicker">La différence</p>
-            <h2 data-i18n="home.vsTitle">Pourquoi une caisse populaire</h2>
-          </div>
-          <div class="grid-4">
-            <article class="glass card reveal"><h3 data-i18n="home.vs1t">Propriété des membres</h3><p data-i18n="home.vs1b">Les sociétaires détiennent des parts sociales et votent : une personne, une voix.</p></article>
-            <article class="glass card reveal"><h3 data-i18n="home.vs2t">Zone de vie</h3><p data-i18n="home.vs2b">On adhère parce qu’on vit, travaille ou entreprend dans la zone d’intervention — ici, l’Ouest, à partir de Pétion-Ville.</p></article>
-            <article class="glass card reveal"><h3 data-i18n="home.vs3t">Éducation obligatoire</h3><p data-i18n="home.vs3b">La loi haïtienne sur les CEC demande de promouvoir l’éducation économique, sociale et coopérative. Ce n’est pas un extra.</p></article>
-            <article class="glass card reveal"><h3 data-i18n="home.vs4t">Crédit entre nous</h3><p data-i18n="home.vs4b">Le crédit naît de l’épargne collective. Il n’y a pas de magie : plus la caisse est solide, plus elle peut servir.</p></article>
-          </div>
+          <p class="slogan-line" data-i18n="home.slogan">Une caisse populaire qui se tient aux côtés des oubliés.</p>
+          <p class="slogan-support" data-i18n="home.sloganSupport">Épargne, crédit et accompagnement pour les familles et les petits entrepreneurs que le système classique laisse de côté.</p>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="kicker" data-i18n="home.stepsKicker">Adhésion</p>
-            <h2 data-i18n="home.stepsTitle">Trois temps pour devenir sociétaire</h2>
-          </div>
-          <div class="steps">
-            <article class="glass card step reveal"><h3><span class="num">01</span><span data-i18n="home.s1t">Préparez</span></h3><p data-i18n="home.s1b">Pièce d’identité, photos, et les pièces que la caisse confirmera. Montant des parts sociales : [À CONFIRMER].</p></article>
-            <article class="glass card step reveal"><h3><span class="num">02</span><span data-i18n="home.s2t">Rencontrez</span></h3><p data-i18n="home.s2b">Passez à Pétion-Ville ou écrivez-nous. L’adresse civique et les horaires : [À CONFIRMER].</p></article>
-            <article class="glass card step reveal"><h3><span class="num">03</span><span data-i18n="home.s3t">Participez</span></h3><p data-i18n="home.s3b">Carnet de sociétaire, épargne, puis crédit si vous y êtes admissible. Vous votez en assemblée.</p></article>
-          </div>
-          <p style="margin-top:1.2rem"><a class="btn btn-gold" href="./devenir-societaire.html" data-i18n="common.ctaJoin">Devenir sociétaire</a></p>
+      <section class="info-rail" aria-labelledby="info-rail-label">
+        <div class="container info-rail-head">
+          <h2 id="info-rail-label" data-i18n="home.tickerLabel">Infos CPCREDO</h2>
+        </div>
+        <div class="info-rail-window" data-ticker-window>
+          <div class="info-rail-track" data-ticker></div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="glass band reveal">
-            <div>
-              <p class="kicker" data-i18n="home.zoneKicker">Territoire</p>
-              <h2 data-i18n="home.zoneTitle">Ancrés à Pétion-Ville, tournés vers l’Ouest</h2>
-              <p data-i18n="home.zoneBody">CPCREDO est établie à Pétion-Ville, département de l’Ouest. Le périmètre exact d’adhésion (communes, quartiers, critères de résidence ou de travail) sera publié dès confirmation.</p>
-              <p><span class="tbc" data-i18n="home.zoneNote">Rue, numéro, carte d’agence : [À CONFIRMER]</span></p>
-            </div>
-            <div class="zone-visual">
-              <img src="./brand/ouest-dusk.jpg" alt="Collines de Pétion-Ville au soleil couchant." />
-              <p class="zone-caption">Pétion-Ville · Ouest · Ayiti</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="glass cta-final reveal">
-            <p class="kicker" data-i18n="nav.edu">Éducation</p>
-            <h2 data-i18n="home.eduBandTitle">L’argent se comprend avant de se signer</h2>
-            <p class="lead" data-i18n="home.eduBandBody">Budget de rentrée scolaire, sol et caisse, crédit responsable, transferts de la diaspora, arnaques. Des guides clairs, en français et en kreyòl.</p>
-            <div class="cta-row" style="justify-content:center">
-              <a class="btn btn-teal" href="./education-financiere.html" data-i18n="common.ctaEdu">Éducation financière</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="kicker" data-i18n="home.newsKicker">Journal de bord</p>
-            <h2 data-i18n="home.newsTitle">Ce qui vient — sans dates inventées</h2>
-          </div>
-          <div class="grid-3">
-            <article class="glass card news-card reveal">
-              <time class="meta" data-i18n="news.a1d">[À CONFIRMER]</time>
-              <h3 data-i18n="news.a1t">CPCREDO ouvre ses portes à Pétion-Ville</h3>
-              <p data-i18n="news.a1b"></p>
-              <a class="btn btn-teal" href="./article.html?slug=ouverture" data-i18n="news.read">Lire</a>
-            </article>
-            <article class="glass card news-card reveal">
-              <time class="meta" data-i18n="news.a2d">[À CONFIRMER]</time>
-              <h3 data-i18n="news.a2t">Comment devenir sociétaire</h3>
-              <p data-i18n="news.a2b"></p>
-              <a class="btn btn-teal" href="./article.html?slug=societaire" data-i18n="news.read">Lire</a>
-            </article>
-            <article class="glass card news-card reveal">
-              <time class="meta" data-i18n="news.a3d">[À CONFIRMER]</time>
-              <h3 data-i18n="news.a3t">L’épargne, premier geste de développement</h3>
-              <p data-i18n="news.a3b"></p>
-              <a class="btn btn-teal" href="./article.html?slug=epargne" data-i18n="news.read">Lire</a>
-            </article>
-          </div>
-          <p style="margin-top:1.2rem"><a href="./actualites.html" data-i18n="common.learnMore">En savoir plus</a></p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="glass cta-final reveal">
-            <h2 data-i18n="home.closeTitle">Prêt à parler avec la caisse ?</h2>
-            <p class="lead" data-i18n="home.closeBody">WhatsApp, appel ou courriel — on vous répond en français ou en kreyòl.</p>
-            <div class="cta-row" style="justify-content:center">
-              <a class="btn btn-gold" href="tel:+50941081537">+509 4108-1537</a>
-              <a class="btn btn-wa" data-whatsapp>WhatsApp</a>
-              <a class="btn btn-ghost" href="./contact.html" data-i18n="common.ctaContact">Nous écrire</a>
-            </div>
-          </div>
+      <section class="section next-modules">
+        <div class="container grid-3">
+          <a class="glass card next-card" href="./devenir-societaire.html">
+            <h3 data-i18n="home.nextJoin">Rejoindre la caisse</h3>
+            <p data-i18n="home.nextJoinBody">Devenir sociétaire, c’est entrer dans la caisse avec une voix.</p>
+            <span class="next-link" data-i18n="home.ctaJoin">Devenir sociétaire</span>
+          </a>
+          <a class="glass card next-card" href="./produits.html">
+            <h3 data-i18n="home.nextProducts">Nos produits</h3>
+            <p data-i18n="home.nextProductsBody">Épargne et crédit, expliqués simplement, sans catalogue ici.</p>
+            <span class="next-link" data-i18n="common.ctaProducts">Voir les produits</span>
+          </a>
+          <a class="glass card next-card" href="./contact.html">
+            <h3 data-i18n="home.nextWrite">Nous écrire</h3>
+            <p data-i18n="home.nextWriteBody">Pétion-Ville. WhatsApp, appel ou courriel, en français ou en kreyòl.</p>
+            <span class="next-link" data-i18n="common.ctaContact">Nous écrire</span>
+          </a>
         </div>
       </section>
     </main>
