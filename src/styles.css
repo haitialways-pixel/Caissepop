@@ -622,15 +622,39 @@ input:focus, select:focus, textarea:focus {
 .footer-links a { color: var(--ink-muted); text-decoration: none; }
 .footer-links a:hover { color: var(--gold-400); }
 .lang-switch-footer { margin-top: 1rem; }
-.footer-bottom {
-  display: grid;
-  gap: 0.4rem;
-  margin-top: 2.4rem;
-  padding-top: 1.2rem;
+.footer-upper {
+  margin-top: 1.6rem;
+  padding: 0.85rem 0;
   border-top: 1px solid rgba(255,255,255,0.06);
-  color: var(--ink-faint);
-  font-size: 0.85rem;
 }
+.footer-upper-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1.2rem;
+}
+.footer-upper-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 1rem;
+  font-size: 0.82rem;
+}
+.footer-upper-left a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+.footer-upper-left a:hover { color: var(--gold-400); }
+.footer-upper-left .lang-switch { margin: 0; }
+.footer-legal {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 0.7rem 1.25rem;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+}
+.footer-legal p { margin: 0; }
 .brand-footer { margin-bottom: 1rem; }
 
 .fab-stack {
@@ -756,21 +780,21 @@ input:focus, select:focus, textarea:focus {
 .footer-toolbar a:hover { color: var(--gold-400); }
 .rate-chip {
   appearance: none;
-  border: 1px solid var(--stroke);
+  border: 0;
   background: transparent;
-  color: var(--teal-300);
+  color: #3b82f6;
   font: inherit;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   min-height: 32px;
-  padding: 0.2rem 0.7rem;
-  border-radius: 999px;
+  padding: 0.2rem 0;
+  margin-left: auto;
   cursor: pointer;
+  text-align: right;
 }
 .rate-chip:hover, .rate-chip[aria-expanded="true"] {
-  border-color: var(--stroke-gold);
-  color: var(--gold-300);
+  color: #60a5fa;
 }
 .rate-panel {
   position: fixed;
@@ -897,7 +921,8 @@ input:focus, select:focus, textarea:focus {
   to { transform: translateX(-50%); }
 }
 
-.next-modules { padding-top: 2.2rem; }
+.next-modules { padding-top: 2.2rem; padding-bottom: 1.4rem; }
+.info-rail { padding: 0.4rem 0 2.2rem; }
 .next-card {
   text-decoration: none;
   color: inherit;

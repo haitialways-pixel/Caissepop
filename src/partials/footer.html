@@ -44,21 +44,22 @@
         <li data-i18n="footer.law">Loi du 20 juin 2002 sur les CEC</li>
         <li>BRH · <span class="tbc" data-i18n="common.tbc">[À CONFIRMER]</span></li>
       </ul>
-      <div class="lang-switch lang-switch-footer" role="group" data-i18n-aria="a11y.lang">
-        <button type="button" class="lang-btn" data-set-lang="fr">FR</button>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <button type="button" class="lang-btn" data-set-lang="ht">Kreyòl</button>
-      </div>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <p>© <span data-year></span> CPCREDO. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-    <div class="footer-toolbar">
-      <a href="tel:+50941081537">+509 4108-1537</a>
-      <a data-whatsapp>WhatsApp</a>
+  <div class="footer-upper">
+    <div class="container footer-upper-inner">
+      <div class="footer-upper-left">
+        <a href="tel:+50941081537">+509 4108-1537</a>
+        <a data-whatsapp>WhatsApp</a>
+        <a href="mailto:contact@cpcredo.com">contact@cpcredo.com</a>
+        <div class="lang-switch lang-switch-footer" role="group" data-i18n-aria="a11y.lang">
+          <button type="button" class="lang-btn" data-set-lang="fr">FR</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-set-lang="ht">Kreyòl</button>
+        </div>
+      </div>
       <button type="button" class="rate-chip" data-rate-open aria-expanded="false" aria-controls="rate-panel" data-i18n="home.rateTrigger">Taux du jour</button>
     </div>
-    <p class="footer-disclaimer" data-i18n="footer.disclaimer">Aucun taux, numéro d’agrément ou adresse de rue n’est publié ici tant qu’il n’est pas confirmé par la caisse.</p>
   </div>
   <div id="rate-panel" class="rate-panel" data-rate-panel hidden role="dialog" aria-modal="true" aria-labelledby="rate-panel-title">
     <p id="rate-panel-title" class="rate-panel-title" data-i18n="home.rateTrigger">Taux du jour</p>
@@ -86,5 +87,8 @@
       <button type="button" class="rate-close" data-rate-close data-i18n="home.rateClose">Fermer</button>
     </div>
     <p class="rate-panel-note" data-i18n="home.rateDisclaimer"></p>
+  </div>
+  <div class="footer-legal">
+    <p>© <span data-year></span> CPCREDO. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
   </div>
 </footer>
