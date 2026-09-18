@@ -1,5 +1,11 @@
 const BRH_URL = "https://www.brh.ht/";
 
+function pickRate(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n) || n < 50 || n > 500) return null;
+  return value;
+}
+
 export function parseBrhHtml(html) {
   const plain = String(html)
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -8,17 +14,27 @@ export function parseBrhHtml(html) {
     .replace(/&nbsp;/gi, " ")
     .replace(/\s+/g, " ");
 
-  const match = plain.match(
+  const refMatch = plain.match(
     /(\d{1,2}\s+[A-Za-zÀ-ÿ]{3,14}\s+20\d{2})\s+(\d{2,3}\.\d{2,4})\s+Taux de R[ée]f[ée]rence/i
   );
-  if (!match) return null;
+  const buyMatch = plain.match(
+    /(\d{2,3}\.\d{2,4})\s*\/\s*(\d{2,3}\.\d{2,4})[\s\S]{0,80}?Taux d['’]achat affich/i
+  );
+  const sellMatch = plain.match(
+    /(\d{2,3}\.\d{2,4})\s*\/\s*(\d{2,3}\.\d{2,4})[\s\S]{0,80}?Taux de vente affich/i
+  );
 
-  const rate = Number(match[2]);
-  if (!Number.isFinite(rate) || rate < 50 || rate > 500) return null;
+  const reference = refMatch ? pickRate(refMatch[2]) : null;
+  const buy = buyMatch ? pickRate(buyMatch[1]) : null;
+  const sell = sellMatch ? pickRate(sellMatch[1]) : null;
+  if (!reference && !buy && !sell) return null;
 
   return {
-    date: match[1].trim(),
-    rate: match[2],
+    date: refMatch ? refMatch[1].trim() : null,
+    reference,
+    buy,
+    sell,
+    rate: reference,
     source: "BRH",
   };
 }

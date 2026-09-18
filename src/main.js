@@ -166,21 +166,28 @@ function renderTicker(lang) {
 async function loadBrhRate() {
   const root = document.querySelector("[data-brh-rate]");
   if (!root) return;
-  const valueEl = root.querySelector("[data-brh-value]");
+  const buyEl = root.querySelector("[data-brh-buy]");
+  const sellEl = root.querySelector("[data-brh-sell]");
+  const refEl = root.querySelector("[data-brh-ref]");
   const dateEl = root.querySelector("[data-brh-date]");
   const pending = translations[readLang()]?.home?.ratePending || "[À CONFIRMER]";
+  const dash = "—,—";
   const showPlaceholder = () => {
-    if (valueEl) valueEl.textContent = "—,—";
+    if (buyEl) buyEl.textContent = dash;
+    if (sellEl) sellEl.textContent = dash;
+    if (refEl) refEl.textContent = dash;
     if (dateEl) dateEl.textContent = pending;
   };
   try {
     const res = await fetch("/api/brh-rate", { headers: { Accept: "application/json" } });
     const data = await res.json();
-    if (!data?.ok || !data.rate) {
+    if (!data?.ok) {
       showPlaceholder();
       return;
     }
-    if (valueEl) valueEl.textContent = formatBrhRate(data.rate);
+    if (buyEl) buyEl.textContent = data.buy ? formatBrhRate(data.buy) : dash;
+    if (sellEl) sellEl.textContent = data.sell ? formatBrhRate(data.sell) : dash;
+    if (refEl) refEl.textContent = data.reference || data.rate ? formatBrhRate(data.reference || data.rate) : dash;
     if (dateEl) dateEl.textContent = data.date || pending;
   } catch {
     showPlaceholder();

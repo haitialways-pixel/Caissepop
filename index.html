@@ -41,22 +41,7 @@
           <div class="welcome-veil"></div>
         </div>
         <div class="container welcome-inner">
-          <div class="welcome-glass">
-            <div class="cp-emblem" aria-hidden="true">
-              <svg viewBox="0 0 120 120" width="120" height="120">
-                <defs>
-                  <linearGradient id="cp-gold" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#f6d98a"/>
-                    <stop offset="55%" stop-color="#e8c056"/>
-                    <stop offset="100%" stop-color="#2ef2c8"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="60" cy="60" r="56" fill="none" stroke="url(#cp-gold)" stroke-width="1.4" opacity="0.9"/>
-                <circle cx="60" cy="60" r="48" fill="rgba(7,17,31,0.55)" stroke="rgba(46,242,200,0.28)" stroke-width="1"/>
-                <text x="60" y="74" text-anchor="middle" font-family="Syne, Segoe UI, sans-serif" font-size="44" font-weight="800" fill="url(#cp-gold)" letter-spacing="-2">CP</text>
-              </svg>
-            </div>
-            <p class="welcome-place" data-i18n="home.place">Pétion-Ville, Haïti</p>
+          <div class="welcome-copy">
             <h1 id="welcome-title" class="welcome-hello" data-i18n="home.hello">Bienvenue à CPCREDO</h1>
             <p class="official-name">
               <span class="official-line1" data-i18n="home.nameLine1">Caisse Populaire d’Épargne et de Crédit</span>
@@ -72,21 +57,31 @@
 
       <section class="rate-bar" data-brh-rate>
         <div class="container rate-bar-inner">
-          <div class="rate-pair">
-            <span class="rate-codes">USD <span aria-hidden="true">→</span> HTG</span>
-            <p class="rate-figure">
-              <span class="rate-eq">1 USD =</span>
-              <strong data-brh-value>—,—</strong>
+          <p class="rate-usd">1 USD</p>
+          <div class="rate-quotes">
+            <div class="rate-quote">
+              <span class="rate-k" data-i18n="home.rateBuy">Achat</span>
+              <strong data-brh-buy>—,—</strong>
               <span class="rate-ccy">HTG</span>
-            </p>
-            <p class="rate-unit" data-i18n="home.rateUnit">gourdes pour 1 dollar EU</p>
+            </div>
+            <div class="rate-quote">
+              <span class="rate-k" data-i18n="home.rateSell">Vente</span>
+              <strong data-brh-sell>—,—</strong>
+              <span class="rate-ccy">HTG</span>
+            </div>
+            <div class="rate-quote">
+              <span class="rate-k" data-i18n="home.rateRef">Référence BRH</span>
+              <strong data-brh-ref>—,—</strong>
+              <span class="rate-ccy">HTG</span>
+            </div>
           </div>
-          <div class="rate-meta">
-            <p class="rate-label" data-i18n="home.rateLabel">Taux de référence BRH</p>
-            <p class="rate-date"><span data-i18n="home.rateUpdated">Mise à jour</span> : <span data-brh-date>[À CONFIRMER]</span></p>
-            <p class="rate-note" data-i18n="home.rateDisclaimer">Source : Banque de la République d’Haïti (BRH). Taux de référence, pas un taux d’achat/vente CPCREDO.</p>
+          <p class="rate-foot">
+            <span data-brh-date>[À CONFIRMER]</span>
+            <span aria-hidden="true"> · </span>
+            <span data-i18n="home.rateSource">Source : BRH</span>
             <a class="rate-link" href="https://www.brh.ht/" target="_blank" rel="noopener noreferrer" data-i18n="home.rateLink">Voir la BRH</a>
-          </div>
+          </p>
+          <p class="rate-note" data-i18n="home.rateDisclaimer">Source BRH. Le taux de référence n’est pas un taux d’opération CPCREDO. Achat et vente selon le marché / affichage BRH, à confirmer en agence.</p>
         </div>
       </section>
 
