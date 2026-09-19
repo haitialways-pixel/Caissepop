@@ -3,7 +3,7 @@ export const translations = {
     meta: {
       homeTitle: "Bienvenue à CPCREDO — Caisse populaire de Pétion-Ville",
       homeDesc:
-        "Bienvenue à CPCREDO, Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest. Pétion-Ville, Haïti.",
+        "Bienvenue à CPCREDO, Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest. Pétion-Ville, Haïti.",
       aboutTitle: "À propos — CPCREDO",
       aboutDesc: "Mission, vision, valeurs et gouvernance de CPCREDO à Pétion-Ville.",
       productsTitle: "Épargne et crédit — CPCREDO",
@@ -31,7 +31,7 @@ export const translations = {
     },
     brand: {
       tag: "Caisse populaire · Pétion-Ville",
-      full: "Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest",
+      full: "Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest",
     },
     nav: {
       home: "Accueil",
@@ -62,7 +62,7 @@ export const translations = {
       explore: "Explorer",
       contact: "Contact",
       legal: "Cadre",
-      coop: "Caisse populaire d’épargne et de crédit. Un sociétaire, une voix. Nous ne sommes pas une banque commerciale.",
+      coop: "Caisse populaire épargne et de crédit. Un sociétaire, une voix. Nous ne sommes pas une banque commerciale.",
       law: "Loi du 20 juin 2002 sur les CEC",
       rights: "Tous droits réservés.",
       disclaimer:
@@ -71,7 +71,7 @@ export const translations = {
     home: {
       place: "Pétion-Ville, Haïti",
       hello: "Bienvenue à CPCREDO",
-      nameLine1: "Caisse Populaire d’Épargne et de Crédit",
+      nameLine1: "Caisse Populaire Épargne et de Crédit",
       nameLine2: "pour le Développement de l’Ouest",
       ctaJoin: "Devenir sociétaire",
       ctaContact: "Nous contacter",
@@ -106,7 +106,7 @@ export const translations = {
     about: {
       kicker: "À propos",
       title: "Une caisse pour le développement de l’Ouest",
-      lead: "CPCREDO : Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest est une caisse populaire nouvellement établie à Pétion-Ville. Elle s’inscrit dans la tradition haïtienne des caisses populaires : solidarité, démocratie interne, et services pour celles et ceux que le système bancaire classique n’arrive pas à satisfaire.",
+      lead: "CPCREDO : Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest est une caisse populaire nouvellement établie à Pétion-Ville. Elle s’inscrit dans la tradition haïtienne des caisses populaires : solidarité, démocratie interne, et services pour celles et ceux que le système bancaire classique n’arrive pas à satisfaire.",
       missionTitle: "Mission",
       mission:
         "Offrir à nos sociétaires des services d’épargne et de crédit accessibles, responsables et durables, afin de renforcer les ménages et les petites activités économiques de l’Ouest.",
@@ -237,11 +237,11 @@ export const translations = {
       back: "Retour aux actualités",
       a1k: "Nouvelle institution",
       a1t: "CPCREDO ouvre ses portes à Pétion-Ville",
-      a1b: "La Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest accueille les familles et les petites activités de Pétion-Ville.",
+      a1b: "La Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest accueille les familles et les petites activités de Pétion-Ville.",
       a1d: "[À CONFIRMER]",
       a1pageTitle: "CPCREDO ouvre ses portes à Pétion-Ville — CPCREDO",
       a1body:
-        "<p>CPCREDO, Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest, ouvre ses portes à Pétion-Ville. Nouvelle caisse populaire, elle s’adresse aux ménages, aux travailleurs et aux petites activités économiques que le système bancaire classique n’arrive pas toujours à servir.</p><p>Horaires : lundi au vendredi 8:00 ~ 16:00, samedi 9:00 ~ 13:00, fermé le dimanche. Rue exacte : [À CONFIRMER].</p><p>Téléphone et WhatsApp : +509 4108-1537. Courriel : contact@cpcredo.com.</p>",
+        "<p>CPCREDO, Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest, ouvre ses portes à Pétion-Ville. Nouvelle caisse populaire, elle s’adresse aux ménages, aux travailleurs et aux petites activités économiques que le système bancaire classique n’arrive pas toujours à servir.</p><p>Horaires : lundi au vendredi 8:00 ~ 16:00, samedi 9:00 ~ 13:00, fermé le dimanche. Rue exacte : [À CONFIRMER].</p><p>Téléphone et WhatsApp : +509 4108-1537. Courriel : contact@cpcredo.com.</p>",
       a2k: "Nouvelle institution",
       a2t: "Comment devenir sociétaire",
       a2b: "Adhérer, ce n’est pas seulement ouvrir un compte : c’est prendre une part sociale et une voix dans la caisse.",
@@ -292,14 +292,14 @@ export const translations = {
       title: "Cadre, responsabilité, données",
       editorTitle: "Éditeur",
       editor:
-        "CPCREDO — Caisse Populaire d’Épargne et de Crédit pour le Développement de l’Ouest. Siège annoncé : Pétion-Ville, Haïti. Adresse civique : [À CONFIRMER]. Courriel : contact@cpcredo.com. Téléphone : +509 4108-1537.",
+        "CPCREDO — Caisse Populaire Épargne et de Crédit pour le Développement de l’Ouest. Siège annoncé : Pétion-Ville, Haïti. Adresse civique : [À CONFIRMER]. Courriel : contact@cpcredo.com. Téléphone : +509 4108-1537.",
       dirTitle: "Direction de la publication",
       dir: "[À CONFIRMER]",
       hostTitle: "Hébergement",
       host: "[À CONFIRMER]",
       statusTitle: "Statut de l’institution",
       status:
-        "CPCREDO se présente comme une caisse populaire d’épargne et de crédit, dans le cadre de la loi du 20 juin 2002. Le numéro d’autorisation de la Banque de la République d’Haïti, l’avis du CNC, la date de fondation et l’appartenance à une fédération ou à l’ANACAPH : [À CONFIRMER]. Tant que ces éléments ne sont pas publiés ici, n’en présumez pas l’existence.",
+        "CPCREDO se présente comme une caisse populaire épargne et de crédit, dans le cadre de la loi du 20 juin 2002. Le numéro d’autorisation de la Banque de la République d’Haïti, l’avis du CNC, la date de fondation et l’appartenance à une fédération ou à l’ANACAPH : [À CONFIRMER]. Tant que ces éléments ne sont pas publiés ici, n’en présumez pas l’existence.",
       notBank:
         "CPCREDO n’est pas une banque commerciale. Les parts sociales ne sont pas un dépôt à vue. Les conditions de retrait, de crédit et de rémunération de l’épargne relèvent des statuts et des politiques internes — [À CONFIRMER].",
       insureTitle: "Protection de l’épargne",
