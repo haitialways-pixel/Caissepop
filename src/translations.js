@@ -179,7 +179,7 @@ export const translations = {
       lead: "Le sociétaire détient au moins une part sociale et un carnet. Il vote. Il n’est pas un usager de passage.",
       whoTitle: "Qui peut adhérer ?",
       who:
-        "Dans le droit des CEC haïtiennes, on adhère en général si l’on a son domicile, une résidence, un établissement ou un travail habituel dans la zone géographique de la caisse. La zone exacte de CPCREDO : [À CONFIRMER]. Personnes morales : [À CONFIRMER].",
+        "N’importe qui a son domicile, une résidence, un établissement ou un travail habituel à Pétion-Ville et ses environs.",
       stepsTitle: "Le parcours",
       st1t: "1 · Informez-vous",
       st1b: "Lisez les produits, posez vos questions, venez avec vos doutes. WhatsApp et accueil existent pour ça.",
